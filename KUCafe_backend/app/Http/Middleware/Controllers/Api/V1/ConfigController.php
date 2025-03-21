@@ -63,7 +63,7 @@ class ConfigController extends Controller
         if ($validator->errors()->count()>0) {
             return response()->json(['errors' => Helpers::error_processor($validator)], 403);
         }
-        $response = Http::get('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='.$request['search_text'].'&key='.'AIzaSyCKkt6EeNUTnPBtyG82U1xhfcuKliiK5s0');
+        $response = Http::get('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='.$request['search_text'].'&key='.'your-google-api-key-here');
         return $response->json();
     }
         public function place_api_details(Request $request)
@@ -75,7 +75,7 @@ class ConfigController extends Controller
         if ($validator->errors()->count()>0) {
             return response()->json(['errors' => Helpers::error_processor($validator)], 403);
         }
-        $response = Http::get('https://maps.googleapis.com/maps/api/place/details/json?placeid='.$request['placeid'].'&key='.'AIzaSyCKkt6EeNUTnPBtyG82U1xhfcuKliiK5s0');
+        $response = Http::get('https://maps.googleapis.com/maps/api/place/details/json?placeid='.$request['placeid'].'&key='.'your-google-api-key-here');
         return $response->json();
     }
 }
