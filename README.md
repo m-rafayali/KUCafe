@@ -64,6 +64,7 @@ flutter run
 💡 Muhammad Ibrahim Khan – Frontend (Flutter App)
 💡 Muhammad Arham Khan – POS System & Order Processing
 💡 Ayan Ali – Testing, Security & Deployment
-📝 License
+```
 
+📝 License
 This project is licensed under the MIT License.
